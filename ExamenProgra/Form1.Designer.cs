@@ -35,16 +35,21 @@ namespace ExamenProgra
             this.PicBox_Bacteria3 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_bacteria1 = new System.Windows.Forms.Button();
             this.btn_bacteria2 = new System.Windows.Forms.Button();
             this.btn_bacteria3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // PicBox_Bacteria2
@@ -72,7 +77,7 @@ namespace ExamenProgra
             // PicBox_Bacteria1
             // 
             this.PicBox_Bacteria1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
-            this.PicBox_Bacteria1.Location = new System.Drawing.Point(657, 386);
+            this.PicBox_Bacteria1.Location = new System.Drawing.Point(661, 386);
             this.PicBox_Bacteria1.Name = "PicBox_Bacteria1";
             this.PicBox_Bacteria1.Size = new System.Drawing.Size(118, 90);
             this.PicBox_Bacteria1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,8 +95,19 @@ namespace ExamenProgra
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 516);
             this.panel1.TabIndex = 4;
-            this.panel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
-            this.panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
+            this.panel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel_DragDrop);
+            this.panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel_DragEnter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
+            this.pictureBox1.Location = new System.Drawing.Point(80, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_bacteria1
             // 
@@ -120,21 +136,36 @@ namespace ExamenProgra
             this.btn_bacteria3.Text = "Termofilas";
             this.btn_bacteria3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
-            this.pictureBox1.Location = new System.Drawing.Point(97, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(637, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(421, 75);
+            this.panel2.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(831, 213);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
@@ -142,13 +173,15 @@ namespace ExamenProgra
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 561);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.PicBox_Bacteria1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_bacteria3);
             this.Controls.Add(this.btn_bacteria2);
             this.Controls.Add(this.btn_bacteria1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PicBox_Bacteria2);
             this.Controls.Add(this.PicBox_Bacteria3);
-            this.Controls.Add(this.PicBox_Bacteria1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).EndInit();
@@ -156,6 +189,8 @@ namespace ExamenProgra
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,6 +205,9 @@ namespace ExamenProgra
         private System.Windows.Forms.Button btn_bacteria3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
