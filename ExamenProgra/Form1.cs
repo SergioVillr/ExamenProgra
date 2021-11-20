@@ -48,8 +48,13 @@ namespace ExamenProgra
 
         private void panel1_DragDrop(object sender, DragEventArgs e)
         {
-           
-            
+            string nombre = e.Data.GetData(DataFormats.Text).ToString();
+
+            if (nombre == "PicBox_Bacteria1")
+            {
+                Bacteria bacteria = new Bacteria(nombre, "especie", e.X, e.Y, panel1);
+            }
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
