@@ -29,7 +29,6 @@ namespace ExamenProgra
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PicBox_Bacteria2 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria3 = new System.Windows.Forms.PictureBox();
@@ -39,7 +38,6 @@ namespace ExamenProgra
             this.btn_bacteria1 = new System.Windows.Forms.Button();
             this.btn_bacteria2 = new System.Windows.Forms.Button();
             this.btn_bacteria3 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -136,11 +134,6 @@ namespace ExamenProgra
             this.btn_bacteria3.Text = "Termofilas";
             this.btn_bacteria3.UseVisualStyleBackColor = true;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
@@ -204,7 +197,6 @@ namespace ExamenProgra
         private System.Windows.Forms.Button btn_bacteria2;
         private System.Windows.Forms.Button btn_bacteria3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;

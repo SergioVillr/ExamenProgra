@@ -57,7 +57,7 @@ namespace ExamenProgra
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        /*private void timer1_Tick(object sender, EventArgs e)
         {
             /*int x = pictureBox1.Location.X;
             int y = pictureBox1.Location.Y;
@@ -65,8 +65,8 @@ namespace ExamenProgra
             y = y + 5;
 
             Point punto = new Point(x, y);
-            pictureBox1.Location = punto;*/
-        }
+            pictureBox1.Location = punto;
+        }*/
 
         private void Mover ()
         {
@@ -86,13 +86,13 @@ namespace ExamenProgra
             e.Effect = DragDropEffects.Copy;
         }
 
-        void panel_DragDrop(object sender, DragEventArgs e)
+      /* void panel_DragDrop(object sender, DragEventArgs e)
         {
             PictureBox pb = sender as PictureBox; // will give you null if it can't be cast to PictureBox
             if (pb != null)
             {
                 pb.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
             }
-        }
+        }*/
     }
 }

@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace ExamenProgra
 {
-    class Bacteria
+    public class Bacteria
     {
-        private string nombre;
-        private string especie;
-        private int x, y;
-        private PictureBox bacteria;
+        public string nombre;
+        public string especie;
+        public int x, y;
+        public PictureBox bacteria;
 
         Panel panel;
 
