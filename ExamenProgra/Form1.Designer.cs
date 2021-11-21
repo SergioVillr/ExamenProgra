@@ -29,6 +29,7 @@ namespace ExamenProgra
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PicBox_Bacteria2 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria3 = new System.Windows.Forms.PictureBox();
@@ -38,6 +39,7 @@ namespace ExamenProgra
             this.btn_bacteria1 = new System.Windows.Forms.Button();
             this.btn_bacteria2 = new System.Windows.Forms.Button();
             this.btn_bacteria3 = new System.Windows.Forms.Button();
+            this.move_bacteria1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).BeginInit();
@@ -94,7 +96,7 @@ namespace ExamenProgra
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
-            this.pictureBox1.Location = new System.Drawing.Point(428, 232);
+            this.pictureBox1.Location = new System.Drawing.Point(193, 156);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,6 +129,11 @@ namespace ExamenProgra
             this.btn_bacteria3.TabIndex = 7;
             this.btn_bacteria3.Text = "Termofilas";
             this.btn_bacteria3.UseVisualStyleBackColor = true;
+            // 
+            // move_bacteria1
+            // 
+            this.move_bacteria1.Enabled = true;
+            this.move_bacteria1.Tick += new System.EventHandler(this.move_bacteria1_Tick);
             // 
             // Form1
             // 
@@ -161,6 +168,7 @@ namespace ExamenProgra
         private System.Windows.Forms.Button btn_bacteria2;
         private System.Windows.Forms.Button btn_bacteria3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer move_bacteria1;
     }
 }
 

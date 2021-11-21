@@ -71,5 +71,16 @@ namespace ExamenProgra
                 bacteria.dibujarImagen();
             }
         }
+
+        private void move_bacteria1_Tick(object sender, EventArgs e)
+        {
+            int x = pictureBox1.Location.X;
+            int y = pictureBox1.Location.Y;
+
+            y = y + 5;
+
+            Point punto = new Point(x, y);
+            pictureBox1.Location = punto;
+        }
     }
 }
