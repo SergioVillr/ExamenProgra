@@ -94,7 +94,7 @@ namespace ExamenProgra
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
-            this.pictureBox1.Location = new System.Drawing.Point(319, 232);
+            this.pictureBox1.Location = new System.Drawing.Point(428, 232);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,11 +134,11 @@ namespace ExamenProgra
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1456, 768);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PicBox_Bacteria1);
             this.Controls.Add(this.btn_bacteria3);
             this.Controls.Add(this.btn_bacteria2);
             this.Controls.Add(this.btn_bacteria1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PicBox_Bacteria2);
             this.Controls.Add(this.PicBox_Bacteria3);
             this.Name = "Form1";

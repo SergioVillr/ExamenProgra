@@ -27,18 +27,14 @@ namespace ExamenProgra
 
         public Bacteria(string nombre, string especie, int x, int y, Panel panel)
         {
-
             this.nombre = nombre;
             this.especie = especie;
+            this.panel = panel;
             this.x = x;
             this.y = y;
-
-            dibujarImagen(nombre, x, y, panel);
-
-            this.panel.Controls.Add(bacteria);
         }
 
-        void dibujarImagen(string nombre, int x, int y, Panel panel)
+        public void dibujarImagen()
         {
 
             if (nombre == "PicBox_Bacteria1")
@@ -52,8 +48,8 @@ namespace ExamenProgra
                 bacteria.Image= imagen;
                 bacteria.SizeMode = PictureBoxSizeMode.StretchImage;
                 bacteria.BackColor = Color.Transparent;
-                bacteria.Location = new Point(x-bacteria.Width/2, y-bacteria.Height);
-                this.panel = panel;
+                bacteria.Location = new Point(x,y);
+                this.panel.Controls.Add(bacteria);
             }
             else if (nombre == "PicBox_Bacteria2")
             {
@@ -63,8 +59,8 @@ namespace ExamenProgra
                 bacteria.Image = imagen;
                 bacteria.SizeMode = PictureBoxSizeMode.StretchImage;
                 bacteria.BackColor = Color.Transparent;
-                bacteria.Location = new Point(x - bacteria.Width / 2, y - bacteria.Height);
-                this.panel = panel;
+                bacteria.Location = new Point(x, y);
+                this.panel.Controls.Add(bacteria);
             }
             else if (nombre == "PicBox_Bacteria3")
             {
@@ -74,8 +70,8 @@ namespace ExamenProgra
                 bacteria.Image = imagen;
                 bacteria.SizeMode = PictureBoxSizeMode.StretchImage;
                 bacteria.BackColor = Color.Transparent;
-                bacteria.Location = new Point(x - bacteria.Width / 2, y - bacteria.Height);
-                this.panel = panel;
+                bacteria.Location = new Point(x, y);
+                this.panel.Controls.Add(bacteria);
             }
         }
     }

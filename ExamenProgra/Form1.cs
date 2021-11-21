@@ -17,9 +17,9 @@ namespace ExamenProgra
             InitializeComponent();
 
             panel1.AllowDrop = true;
-           
+
             panel1.DragEnter += panel1_DragEnter;
-            
+
             panel1.DragDrop += panel1_DragDrop;
 
             PicBox_Bacteria1.MouseDown += PicBox_MouseDown;
@@ -44,21 +44,31 @@ namespace ExamenProgra
 
         private void panel1_DragDrop(object sender, DragEventArgs e)
         {
+            
             string nombre = e.Data.GetData(DataFormats.Text).ToString();
 
             if (nombre == "PicBox_Bacteria1")
             {
-                Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-10, (e.Y)-10, panel1);
+                int x = 0;
+                int y = 0;
+
+                x = e.X;
+                y = e.Y;
+
+                Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+                bacteria.dibujarImagen();
                 Console.WriteLine(e.X);
                 Console.WriteLine(e.Y);
             }
             else if (nombre == "PicBox_Bacteria2")
             {
-                Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-10, (e.Y)-10, panel1);
+                Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-20, (e.Y)-15, panel1);
+                bacteria.dibujarImagen();
             }
             else if (nombre == "PicBox_Bacteria3")
             {
-                Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-10, (e.Y)-10, panel1);
+                Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-20, (e.Y)-15, panel1);
+                bacteria.dibujarImagen();
             }
         }
     }
