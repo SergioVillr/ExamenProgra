@@ -56,7 +56,6 @@ namespace ExamenProgra
             this.PicBox_Bacteria2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_Bacteria2.TabIndex = 3;
             this.PicBox_Bacteria2.TabStop = false;
-            this.PicBox_Bacteria2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PicBox_MouseDown);
             // 
             // PicBox_Bacteria3
             // 
@@ -67,7 +66,6 @@ namespace ExamenProgra
             this.PicBox_Bacteria3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_Bacteria3.TabIndex = 2;
             this.PicBox_Bacteria3.TabStop = false;
-            this.PicBox_Bacteria3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PicBox_MouseDown);
             // 
             // PicBox_Bacteria1
             // 
@@ -78,7 +76,6 @@ namespace ExamenProgra
             this.PicBox_Bacteria1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBox_Bacteria1.TabIndex = 1;
             this.PicBox_Bacteria1.TabStop = false;
-            this.PicBox_Bacteria1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PicBox_MouseDown);
             // 
             // panel1
             // 
@@ -133,7 +130,6 @@ namespace ExamenProgra
             // move_bacteria1
             // 
             this.move_bacteria1.Enabled = true;
-            this.move_bacteria1.Tick += new System.EventHandler(this.move_bacteria1_Tick);
             // 
             // Form1
             // 
