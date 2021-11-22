@@ -56,24 +56,24 @@ namespace ExamenProgra
             {
                 Console.WriteLine(e.X + " form");
                 Console.WriteLine(e.Y + " form");
-                int x = 0;
-                int y = 0;
-
-                x = e.X;
-                y = e.Y;
+                int x = e.X;
+                int y = e.Y;
 
                 Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
                 bacteria.dibujarImagen();
 
-                Thread hilo = new Thread(bacteria.Mover);
-                hilo.Start();
+                //Thread hilo = new Thread(bacteria.Mover);
+                //hilo.Start();
                 //hilo.Join();
 
 
             }
             else if (nombre == "PicBox_Bacteria2")
             {
-                Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-20, (e.Y)-15, panel1);
+                int x = e.X;
+                int y = e.Y;
+
+                Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
                 bacteria.dibujarImagen();
                 
             }

@@ -30,7 +30,6 @@ namespace ExamenProgra
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PicBox_Bacteria2 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria3 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria1 = new System.Windows.Forms.PictureBox();
@@ -80,7 +79,7 @@ namespace ExamenProgra
             // panel1
             // 
             this.panel1.AllowDrop = true;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
