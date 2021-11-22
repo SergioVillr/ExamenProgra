@@ -39,6 +39,15 @@ namespace ExamenProgra
             this.x = x;
             this.y = y;
             this.bacteria= new PictureBox();
+
+
+            dibujarImagen();
+            
+            this.panel.Controls.Add(bacteria);
+            Mover();
+
+
+
         }
 
         public void dibujarImagen()
@@ -58,10 +67,10 @@ namespace ExamenProgra
                 bacteria.Location = new Point(x,y);
                 this.panel.Controls.Add(bacteria);
 
-                tm = new System.Timers.Timer();
-                tm.Interval = 1000;
-                tm.Elapsed += new System.Timers.ElapsedEventHandler(Mover);
-                tm.Enabled = true;
+                //tm = new System.Timers.Timer();
+                //tm.Interval = 1000;
+                //tm.Elapsed += new System.Timers.ElapsedEventHandler(Mover);
+                //tm.Enabled = true;
 
 
             }
@@ -74,7 +83,7 @@ namespace ExamenProgra
                 bacteria.SizeMode = PictureBoxSizeMode.StretchImage;
                 bacteria.BackColor = Color.Transparent;
                 bacteria.Location = new Point(x, y);
-                this.panel.Controls.Add(bacteria);
+                //this.panel.Controls.Add(bacteria);
             }
             else if (nombre == "PicBox_Bacteria3")
             {
@@ -85,7 +94,7 @@ namespace ExamenProgra
                 bacteria.SizeMode = PictureBoxSizeMode.StretchImage;
                 bacteria.BackColor = Color.Transparent;
                 bacteria.Location = new Point(x, y);
-                this.panel.Controls.Add(bacteria);
+                //this.panel.Controls.Add(bacteria);
             }
         }
 
@@ -94,7 +103,7 @@ namespace ExamenProgra
             bacteria.Location = new Point(bacteria.Location.X, bacteria.Location.Y + 10);
         }
 
-        public void Mover(object sender, EventArgs e)
+        public void Mover()
         {
             if (bacteria.InvokeRequired)
             {
@@ -116,7 +125,7 @@ namespace ExamenProgra
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
                         this.panel.Refresh();
-                        Thread.Sleep(100);
+                        Thread.Sleep(500);
                     }
                 }));
             }

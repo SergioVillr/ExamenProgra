@@ -13,6 +13,8 @@ namespace ExamenProgra
 {
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
             InitializeComponent();
@@ -49,38 +51,119 @@ namespace ExamenProgra
 
         private void panel1_DragDrop(object sender, DragEventArgs e)
         {
-            
+
             string nombre = e.Data.GetData(DataFormats.Text).ToString();
+            int x = e.X;
+            int y = e.Y;
 
-            if (nombre == "PicBox_Bacteria1")
-            {
-                Console.WriteLine(e.X + " form");
-                Console.WriteLine(e.Y + " form");
-                int x = e.X;
-                int y = e.Y;
+            Thread myNewThread = new Thread(() => Moveee(nombre,x,y));
+            myNewThread.Start();
 
-                Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
-                bacteria.dibujarImagen();
-
-                //Thread hilo = new Thread(bacteria.Mover);
-                //hilo.Start();
-                //hilo.Join();
+            //Thread hilo = new Thread(Moveee);
+            //hilo.Start(nombre);
 
 
-            }
-            else if (nombre == "PicBox_Bacteria2")
-            {
-                int x = e.X;
-                int y = e.Y;
+            
 
-                Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
-                bacteria.dibujarImagen();
+            //if (nombre == "PicBox_Bacteria1")
+            //{
+            //    Console.WriteLine(e.X + " form");
+            //    Console.WriteLine(e.Y + " form");
+            //    int x = e.X;
+            //    int y = e.Y;
+
+            //    Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+            //    //bacteria.dibujarImagen();
+
+
+            //    Thread hilo = new Thread(bacteria.Mover);
+            //    hilo.Start();
+
+
+            //}
+            //else if (nombre == "PicBox_Bacteria2")
+            //{
+            //    int x = e.X;
+            //    int y = e.Y;
+
+            //    Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+            //   // bacteria.dibujarImagen();
                 
-            }
-            else if (nombre == "PicBox_Bacteria3")
+            //}
+            //else if (nombre == "PicBox_Bacteria3")
+            //{
+            //    Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-20, (e.Y)-15, panel1);
+            //    //bacteria.dibujarImagen();
+            //}
+        }
+
+
+
+
+        private void Moveee(string nombre, int x, int y)
+        {
+
+
+            if (InvokeRequired)
             {
-                Bacteria bacteria = new Bacteria(nombre, "especie", (e.X)-20, (e.Y)-15, panel1);
-                bacteria.dibujarImagen();
+                Invoke(new MethodInvoker(delegate
+                {
+                    if (nombre == "PicBox_Bacteria1")
+                    {
+                        Console.WriteLine(x + " form");
+                        Console.WriteLine(y + " form");
+
+                        Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+                        //bacteria.dibujarImagen();
+
+
+                        //Thread hilo = new Thread(bacteria.Mover);
+                        //hilo.Start();
+
+
+                    }
+                    else if (nombre == "PicBox_Bacteria2")
+                    {
+
+                        Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+                        // bacteria.dibujarImagen();
+
+                    }
+                    else if (nombre == "PicBox_Bacteria3")
+                    {
+                        Bacteria bacteria = new Bacteria(nombre, "especie", (x) - 20, (y) - 15, panel1);
+                        //bacteria.dibujarImagen();
+                    }
+                }));
+            }
+            else
+            {
+                if (nombre == "PicBox_Bacteria1")
+                {
+                    Console.WriteLine(x + " form");
+                    Console.WriteLine(y + " form");
+
+                    Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+                    //bacteria.dibujarImagen();
+
+
+                    //Thread hilo = new Thread(bacteria.Mover);
+                    //hilo.Start();
+
+
+                }
+                else if (nombre == "PicBox_Bacteria2")
+                {
+
+                    Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+                    // bacteria.dibujarImagen();
+
+                }
+                else if (nombre == "PicBox_Bacteria3")
+                {
+                    Bacteria bacteria = new Bacteria(nombre, "especie", (x) - 20, (y) - 15, panel1);
+                    //bacteria.dibujarImagen();
+                }
             }
         }
     }
