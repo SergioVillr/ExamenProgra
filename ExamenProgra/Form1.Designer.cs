@@ -29,7 +29,6 @@ namespace ExamenProgra
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.PicBox_Bacteria2 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria3 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria1 = new System.Windows.Forms.PictureBox();
@@ -38,7 +37,6 @@ namespace ExamenProgra
             this.btn_bacteria1 = new System.Windows.Forms.Button();
             this.btn_bacteria2 = new System.Windows.Forms.Button();
             this.btn_bacteria3 = new System.Windows.Forms.Button();
-            this.move_bacteria1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).BeginInit();
@@ -126,10 +124,6 @@ namespace ExamenProgra
             this.btn_bacteria3.Text = "Termofilas";
             this.btn_bacteria3.UseVisualStyleBackColor = true;
             // 
-            // move_bacteria1
-            // 
-            this.move_bacteria1.Enabled = true;
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -163,7 +157,6 @@ namespace ExamenProgra
         private System.Windows.Forms.Button btn_bacteria2;
         private System.Windows.Forms.Button btn_bacteria3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer move_bacteria1;
     }
 }
 

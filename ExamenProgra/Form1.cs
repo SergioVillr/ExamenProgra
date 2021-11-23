@@ -28,8 +28,7 @@ namespace ExamenProgra
             PicBox_Bacteria1.MouseDown += PicBox_MouseDown;
             PicBox_Bacteria2.MouseDown += PicBox_MouseDown;
             PicBox_Bacteria3.MouseDown += PicBox_MouseDown;
-
-            move_bacteria1.Enabled = false;
+            
         }
 
         private void PicBox_MouseDown(object sender, MouseEventArgs e)
