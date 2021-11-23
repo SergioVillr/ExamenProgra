@@ -108,7 +108,7 @@ namespace ExamenProgra
         {
             Random random = new Random();
 
-            int num = random.Next(1, 4);
+            int num = random.Next(0, 1000);
 
             return num;
 
@@ -121,7 +121,8 @@ namespace ExamenProgra
             {
                 bacteria.Invoke(new MethodInvoker(delegate
                 {
-                    while (bacteria.Location.Y + bacteria.Height < panel.Height)
+                    
+                    while (bacteria.Location.Y + bacteria.Width < panel.Height)
                     {
                         //Console.WriteLine("que asco");
                         //bacteria.Location = new Point(bacteria.Location.X, bacteria.Location.Y+10);
@@ -150,19 +151,27 @@ namespace ExamenProgra
             }
             else
             {
-                while (bacteria.Location.Y + bacteria.Height < panel.Height)
+                Point punt = bacteria.Location;
+                int x = punt.X;
+                int y = punt.Y;
+                while (bacteria.Location.Y + bacteria.Width < panel.Height)
                 {
+
+                    bool bandera = false;
 
                     //bacteria.Location = new Point(bacteria.Location.X, bacteria.Location.Y + 10);
                     //Thread.Sleep(200); // Este cambio de posición se hará 5 veces por Segundo.
-                    if(Direccion()==1)
+                    //Point punt = bacteria.Location;
+                    //int x = punt.X;
+                    //int y = punt.Y;
+                    if (Direccion() > 0 && Direccion() < 250)
                     {
-                        Console.WriteLine("El valor de Direccion es "+Direccion());
+                        Console.WriteLine("El valor de Direccion es " + Direccion());
                         Console.WriteLine("Entro al if ");
-                        Point punt = bacteria.Location;
-    
-                        int x = punt.X;
-                        int y = punt.Y;
+                        //Point punt = bacteria.Location;
+
+                        //int x = punt.X;
+                        //int y = punt.Y;
 
                         y += 5;
 
@@ -170,29 +179,29 @@ namespace ExamenProgra
                         bacteria.Location = punto;
                         this.panel.Refresh();
                     }
-                    if (Direccion() == 2)
+                    if (Direccion() > 250 && Direccion() < 500)
                     {
                         Console.WriteLine("El valor de Direccion es " + Direccion());
                         Console.WriteLine("Entro al else ");
-                        Point punt = bacteria.Location;
+                        //Point punt = bacteria.Location;
 
-                        int x = punt.X;
-                        int y = punt.Y;
+                        //int x = punt.X;
+                        //int y = punt.Y;
 
-                        x += 5;
+                        x += 10;
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
                         this.panel.Refresh();
                     }
-                    if (Direccion() == 3)
+                    if (Direccion() > 500 && Direccion() < 750)
                     {
                         Console.WriteLine("El valor de Direccion es " + Direccion());
                         Console.WriteLine("Entro al else ");
-                        Point punt = bacteria.Location;
+                        // Point punt = bacteria.Location;
 
-                        int x = punt.X;
-                        int y = punt.Y;
+                        //int x = punt.X;
+                        //int y = punt.Y;
 
                         x -= 5;
 
@@ -201,16 +210,16 @@ namespace ExamenProgra
                         this.panel.Refresh();
                     }
 
-                    if (Direccion() == 4)
+                    if (Direccion() > 750 && Direccion() < 1000)
                     {
                         Console.WriteLine("El valor de Direccion es " + Direccion());
                         Console.WriteLine("Entro al else ");
-                        Point punt = bacteria.Location;
+                        //Point punt = bacteria.Location;
 
-                        int x = punt.X;
-                        int y = punt.Y;
+                        //int x = punt.X;
+                        //int y = punt.Y;
 
-                        y-= 5;
+                        y -= 10;
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
@@ -218,6 +227,57 @@ namespace ExamenProgra
                     }
                     await Task.Delay(100);
                 }
+
+
+                //if (Direccion()>0 && Direccion()<25)
+                //{
+                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
+                //    {
+                //        x -= 5;
+
+                //        Point punto = new Point(x, y);
+                //        bacteria.Location = punto;
+                //        this.panel.Refresh();
+                //        await Task.Delay(100);
+                //    }
+                //}
+                //if(Direccion() > 25 && Direccion() < 50)
+                //{
+                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
+                //    {
+                //        x += 5;
+
+                //        Point punto = new Point(x, y);
+                //        bacteria.Location = punto;
+                //        this.panel.Refresh();
+                //        await Task.Delay(100);
+                //    }
+                //}
+                //if (Direccion() > 50 && Direccion() < 75)
+                //{
+                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
+                //    {
+                //        y -= 5;
+
+                //        Point punto = new Point(x, y);
+                //        bacteria.Location = punto;
+                //        this.panel.Refresh();
+                //        await Task.Delay(100);
+                //    }
+                //}
+                //if (Direccion() > 75 && Direccion() < 100)
+                //{
+                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
+                //    {
+                //        y += 5;
+
+                //        Point punto = new Point(x, y);
+                //        bacteria.Location = punto;
+                //        this.panel.Refresh();
+                //        await Task.Delay(100);
+                //    }
+                //}
+
             }
         }
     }
