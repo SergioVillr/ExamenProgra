@@ -55,15 +55,19 @@ namespace ExamenProgra
             string nombre = e.Data.GetData(DataFormats.Text).ToString();
             int x = e.X;
             int y = e.Y;
+            Moveee(nombre, x, y);
+            //Thread myNewThread = new Thread(() => Moveee(nombre,x,y));
+            //myNewThread.Start();
 
-            Thread myNewThread = new Thread(() => Moveee(nombre,x,y));
-            myNewThread.Start();
+            //Task taskA =  Task.Run(() => Moveee(nombre,x,y));
+            //taskA.Start();
+
 
             //Thread hilo = new Thread(Moveee);
             //hilo.Start(nombre);
 
 
-            
+
 
             //if (nombre == "PicBox_Bacteria1")
             //{
@@ -88,7 +92,7 @@ namespace ExamenProgra
 
             //    Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
             //   // bacteria.dibujarImagen();
-                
+
             //}
             //else if (nombre == "PicBox_Bacteria3")
             //{
@@ -103,11 +107,10 @@ namespace ExamenProgra
         private void Moveee(string nombre, int x, int y)
         {
 
-
-            if (InvokeRequired)
-            {
-                Invoke(new MethodInvoker(delegate
-                {
+            //if (InvokeRequired)
+            //{
+                //Invoke(new MethodInvoker(delegate
+                //{
                     if (nombre == "PicBox_Bacteria1")
                     {
                         Console.WriteLine(x + " form");
@@ -134,37 +137,37 @@ namespace ExamenProgra
                         Bacteria bacteria = new Bacteria(nombre, "especie", (x) - 20, (y) - 15, panel1);
                         //bacteria.dibujarImagen();
                     }
-                }));
-            }
-            else
-            {
-                if (nombre == "PicBox_Bacteria1")
-                {
-                    Console.WriteLine(x + " form");
-                    Console.WriteLine(y + " form");
+            //}));
+            //}
+            //else
+            //{
+            //    if (nombre == "PicBox_Bacteria1")
+            //    {
+            //        Console.WriteLine(x + " form");
+            //        Console.WriteLine(y + " form");
 
-                    Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
-                    //bacteria.dibujarImagen();
-
-
-                    //Thread hilo = new Thread(bacteria.Mover);
-                    //hilo.Start();
+            //        Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+            //        bacteria.dibujarImagen();
 
 
-                }
-                else if (nombre == "PicBox_Bacteria2")
-                {
+            //        Thread hilo = new Thread(bacteria.Mover);
+            //        hilo.Start();
 
-                    Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
-                    // bacteria.dibujarImagen();
 
-                }
-                else if (nombre == "PicBox_Bacteria3")
-                {
-                    Bacteria bacteria = new Bacteria(nombre, "especie", (x) - 20, (y) - 15, panel1);
-                    //bacteria.dibujarImagen();
-                }
-            }
+            //    }
+            //    else if (nombre == "PicBox_Bacteria2")
+            //    {
+
+            //        Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+            //        bacteria.dibujarImagen();
+
+            //    }
+            //    else if (nombre == "PicBox_Bacteria3")
+            //    {
+            //        Bacteria bacteria = new Bacteria(nombre, "especie", (x) - 20, (y) - 15, panel1);
+            //        bacteria.dibujarImagen();
+            //    }
+            //}
         }
     }
 }

@@ -103,7 +103,7 @@ namespace ExamenProgra
             bacteria.Location = new Point(bacteria.Location.X, bacteria.Location.Y + 10);
         }
 
-        public void Mover()
+        public async Task Mover()
         {
             if (bacteria.InvokeRequired)
             {
@@ -125,9 +125,11 @@ namespace ExamenProgra
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
                         this.panel.Refresh();
-                        Thread.Sleep(500);
+                        //Thread.Sleep(500);
+                        
                     }
                 }));
+                await Task.Delay(100);
             }
             else
             {
@@ -146,8 +148,10 @@ namespace ExamenProgra
 
                     Point punto = new Point(x, y);
                     bacteria.Location = punto;
+                    this.panel.Refresh();
+                    await Task.Delay(100);
                 }
-            } 
+            }
         }
     }
 }
