@@ -30,6 +30,8 @@ namespace ExamenProgra
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picture_Co2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_bacteria1 = new System.Windows.Forms.Button();
             this.btn_bacteria2 = new System.Windows.Forms.Button();
             this.btn_bacteria3 = new System.Windows.Forms.Button();
@@ -42,16 +44,14 @@ namespace ExamenProgra
             this.lb_CO2 = new System.Windows.Forms.Label();
             this.btn_AgregarCo2 = new System.Windows.Forms.Button();
             this.btn_QuitarCo2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria1 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria2 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Co2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria3)).BeginInit();
@@ -62,13 +62,35 @@ namespace ExamenProgra
             this.panel1.AllowDrop = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.picture_Co2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1057, 768);
             this.panel1.TabIndex = 4;
+            // 
+            // picture_Co2
+            // 
+            this.picture_Co2.ErrorImage = null;
+            this.picture_Co2.Image = global::ExamenProgra.Properties.Resources.C2;
+            this.picture_Co2.Location = new System.Drawing.Point(928, 633);
+            this.picture_Co2.Name = "picture_Co2";
+            this.picture_Co2.Size = new System.Drawing.Size(126, 128);
+            this.picture_Co2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_Co2.TabIndex = 1;
+            this.picture_Co2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
+            this.pictureBox1.Location = new System.Drawing.Point(193, 156);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_bacteria1
             // 
@@ -175,6 +197,7 @@ namespace ExamenProgra
             this.btn_AgregarCo2.TabIndex = 1;
             this.btn_AgregarCo2.Text = "Agregar";
             this.btn_AgregarCo2.UseVisualStyleBackColor = true;
+            this.btn_AgregarCo2.Click += new System.EventHandler(this.btn_AgregarCo2_Click);
             // 
             // btn_QuitarCo2
             // 
@@ -184,28 +207,7 @@ namespace ExamenProgra
             this.btn_QuitarCo2.TabIndex = 0;
             this.btn_QuitarCo2.Text = "Quitar";
             this.btn_QuitarCo2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = global::ExamenProgra.Properties.Resources.C2;
-            this.pictureBox2.Location = new System.Drawing.Point(928, 633);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(126, 128);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
-            this.pictureBox1.Location = new System.Drawing.Point(193, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btn_QuitarCo2.Click += new System.EventHandler(this.btn_QuitarCo2_Click);
             // 
             // PicBox_Bacteria1
             // 
@@ -255,12 +257,12 @@ namespace ExamenProgra
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Co2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria3)).EndInit();
@@ -282,7 +284,7 @@ namespace ExamenProgra
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_mas;
         private System.Windows.Forms.Button btn_menos;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picture_Co2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lb_CO2;
         private System.Windows.Forms.Button btn_AgregarCo2;

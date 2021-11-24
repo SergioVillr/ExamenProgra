@@ -14,6 +14,7 @@ namespace ExamenProgra
     public partial class Form1 : Form
     {
         int contemp=25;
+        int co2 = 1;
         Bacteria bacteria;
 
         public Form1()
@@ -222,6 +223,18 @@ namespace ExamenProgra
                 }
             }
 
+        }
+
+        private void btn_QuitarCo2_Click(object sender, EventArgs e)
+        {
+            co2 = 0;
+            picture_Co2.Visible = false;
+        }
+
+        private void btn_AgregarCo2_Click(object sender, EventArgs e)
+        {
+            co2 = 1;
+            picture_Co2.Visible = true;
         }
     }
 }
