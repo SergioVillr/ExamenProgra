@@ -13,7 +13,7 @@ namespace ExamenProgra
 {
     public partial class Form1 : Form
     {
-
+        int contemp=25;
 
         public Form1()
         {
@@ -167,6 +167,18 @@ namespace ExamenProgra
             //        bacteria.dibujarImagen();
             //    }
             //}
+        }
+
+        private void btn_menos_Click(object sender, EventArgs e)
+        {
+            contemp -= 1;
+            lb_temp.Text = contemp.ToString();
+        }
+
+        private void btn_mas_Click(object sender, EventArgs e)
+        {
+            contemp += 1;
+            lb_temp.Text = contemp.ToString();
         }
     }
 }

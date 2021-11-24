@@ -173,7 +173,7 @@ namespace ExamenProgra
                         //int x = punt.X;
                         //int y = punt.Y;
 
-                        y += 5;
+                        y += 10;
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
@@ -203,7 +203,7 @@ namespace ExamenProgra
                         //int x = punt.X;
                         //int y = punt.Y;
 
-                        x -= 5;
+                        x -= 10;
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
@@ -228,57 +228,14 @@ namespace ExamenProgra
                     await Task.Delay(100);
                 }
 
-
-                //if (Direccion()>0 && Direccion()<25)
-                //{
-                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
-                //    {
-                //        x -= 5;
-
-                //        Point punto = new Point(x, y);
-                //        bacteria.Location = punto;
-                //        this.panel.Refresh();
-                //        await Task.Delay(100);
-                //    }
-                //}
-                //if(Direccion() > 25 && Direccion() < 50)
-                //{
-                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
-                //    {
-                //        x += 5;
-
-                //        Point punto = new Point(x, y);
-                //        bacteria.Location = punto;
-                //        this.panel.Refresh();
-                //        await Task.Delay(100);
-                //    }
-                //}
-                //if (Direccion() > 50 && Direccion() < 75)
-                //{
-                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
-                //    {
-                //        y -= 5;
-
-                //        Point punto = new Point(x, y);
-                //        bacteria.Location = punto;
-                //        this.panel.Refresh();
-                //        await Task.Delay(100);
-                //    }
-                //}
-                //if (Direccion() > 75 && Direccion() < 100)
-                //{
-                //    while (bacteria.Location.Y + bacteria.Width < panel.Height)
-                //    {
-                //        y += 5;
-
-                //        Point punto = new Point(x, y);
-                //        bacteria.Location = punto;
-                //        this.panel.Refresh();
-                //        await Task.Delay(100);
-                //    }
-                //}
-
             }
         }
+
+
+        void Temperaturas()
+        {
+            
+        }
+
     }
 }
