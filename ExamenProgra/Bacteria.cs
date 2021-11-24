@@ -59,6 +59,7 @@ namespace ExamenProgra
                 Console.WriteLine(y);
 
                 //bacteria = new PictureBox();
+                bacteria.Name = "Psicrofilas";
                 bacteria.Size = new Size(82, 63);
                 Image imagen = Image.FromFile("..\\..\\resource\\bacterium1.png");
                 bacteria.Image= imagen;
@@ -76,7 +77,8 @@ namespace ExamenProgra
             }
             else if (nombre == "PicBox_Bacteria2")
             {
-                bacteria = new PictureBox();
+                //bacteria = new PictureBox();
+                bacteria.Name = "Mesofilas";
                 bacteria.Size = new Size(82, 63);
                 Image imagen = Image.FromFile("..\\..\\resource\\bacterium3.png");
                 bacteria.Image = imagen;
@@ -88,7 +90,8 @@ namespace ExamenProgra
             }
             else if (nombre == "PicBox_Bacteria3")
             {
-                bacteria = new PictureBox();
+                //bacteria = new PictureBox();
+                bacteria.Name = "Termofilas";
                 bacteria.Size = new Size(82, 63);
                 Image imagen = Image.FromFile("..\\..\\resource\\bacterium2.png");
                 bacteria.Image = imagen;
@@ -140,7 +143,7 @@ namespace ExamenProgra
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
-                        this.panel.Refresh();
+                        //this.panel.Refresh();
                         }
                         
                         //Thread.Sleep(500);
@@ -177,7 +180,7 @@ namespace ExamenProgra
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
-                        this.panel.Refresh();
+                        //this.panel.Refresh();
                     }
                     if (Direccion() > 250 && Direccion() < 500)
                     {
@@ -192,7 +195,7 @@ namespace ExamenProgra
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
-                        this.panel.Refresh();
+                        //this.panel.Refresh();
                     }
                     if (Direccion() > 500 && Direccion() < 750)
                     {
@@ -207,7 +210,7 @@ namespace ExamenProgra
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
-                        this.panel.Refresh();
+                        //this.panel.Refresh();
                     }
 
                     if (Direccion() > 750 && Direccion() < 1000)
@@ -223,7 +226,7 @@ namespace ExamenProgra
 
                         Point punto = new Point(x, y);
                         bacteria.Location = punto;
-                        this.panel.Refresh();
+                        //this.panel.Refresh();
                     }
                     await Task.Delay(100);
                 }
@@ -232,9 +235,12 @@ namespace ExamenProgra
         }
 
 
-        void Temperaturas()
+        public void Temperaturas(Bacteria bacteria)
         {
-            
+            if(bacteria.nombre== "PicBox_Bacteria1")
+            {
+                bacteria.bacteria.Visible = false;
+            }
         }
 
     }

@@ -121,19 +121,22 @@
   <data name="bacterium21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resource\bacterium2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bacterium3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\bacterium3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacterium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\bacterium1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bacterium2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resource\bacterium2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resource\Panel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bacterium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resource\bacterium1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bacterium3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resource\bacterium3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Co2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resource\Co2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resource\C2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

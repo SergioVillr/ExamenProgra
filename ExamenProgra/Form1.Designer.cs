@@ -34,10 +34,10 @@ namespace ExamenProgra
             this.btn_bacteria2 = new System.Windows.Forms.Button();
             this.btn_bacteria3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_menos = new System.Windows.Forms.Button();
-            this.btn_mas = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.lb_temp = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_mas = new System.Windows.Forms.Button();
+            this.btn_menos = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_CO2 = new System.Windows.Forms.Label();
             this.btn_AgregarCo2 = new System.Windows.Forms.Button();
@@ -109,15 +109,23 @@ namespace ExamenProgra
             this.panel2.Size = new System.Drawing.Size(376, 141);
             this.panel2.TabIndex = 8;
             // 
-            // btn_menos
+            // lb_temp
             // 
-            this.btn_menos.Location = new System.Drawing.Point(89, 95);
-            this.btn_menos.Name = "btn_menos";
-            this.btn_menos.Size = new System.Drawing.Size(75, 23);
-            this.btn_menos.TabIndex = 0;
-            this.btn_menos.Text = "-";
-            this.btn_menos.UseVisualStyleBackColor = true;
-            this.btn_menos.Click += new System.EventHandler(this.btn_menos_Click);
+            this.lb_temp.AutoSize = true;
+            this.lb_temp.Location = new System.Drawing.Point(171, 50);
+            this.lb_temp.Name = "lb_temp";
+            this.lb_temp.Size = new System.Drawing.Size(19, 13);
+            this.lb_temp.TabIndex = 3;
+            this.lb_temp.Text = "25";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(147, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Temperatura";
             // 
             // btn_mas
             // 
@@ -129,23 +137,15 @@ namespace ExamenProgra
             this.btn_mas.UseVisualStyleBackColor = true;
             this.btn_mas.Click += new System.EventHandler(this.btn_mas_Click);
             // 
-            // label1
+            // btn_menos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(147, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Temperatura";
-            // 
-            // lb_temp
-            // 
-            this.lb_temp.AutoSize = true;
-            this.lb_temp.Location = new System.Drawing.Point(171, 50);
-            this.lb_temp.Name = "lb_temp";
-            this.lb_temp.Size = new System.Drawing.Size(19, 13);
-            this.lb_temp.TabIndex = 3;
-            this.lb_temp.Text = "25";
+            this.btn_menos.Location = new System.Drawing.Point(89, 95);
+            this.btn_menos.Name = "btn_menos";
+            this.btn_menos.Size = new System.Drawing.Size(75, 23);
+            this.btn_menos.TabIndex = 0;
+            this.btn_menos.Text = "-";
+            this.btn_menos.UseVisualStyleBackColor = true;
+            this.btn_menos.Click += new System.EventHandler(this.btn_menos_Click);
             // 
             // panel3
             // 
@@ -187,7 +187,8 @@ namespace ExamenProgra
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ExamenProgra.Properties.Resources.Co2;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = global::ExamenProgra.Properties.Resources.C2;
             this.pictureBox2.Location = new System.Drawing.Point(928, 633);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(126, 128);

@@ -14,6 +14,7 @@ namespace ExamenProgra
     public partial class Form1 : Form
     {
         int contemp=25;
+        Bacteria bacteria;
 
         public Form1()
         {
@@ -115,7 +116,7 @@ namespace ExamenProgra
                         Console.WriteLine(x + " form");
                         Console.WriteLine(y + " form");
 
-                        Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+                        bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
                         //bacteria.dibujarImagen();
 
 
@@ -127,13 +128,13 @@ namespace ExamenProgra
                     else if (nombre == "PicBox_Bacteria2")
                     {
 
-                        Bacteria bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
+                        bacteria = new Bacteria(nombre, "especie", x - 41/*(e.X)-20*/, /*(e.Y)-15*/y - 63, panel1);
                         // bacteria.dibujarImagen();
 
                     }
                     else if (nombre == "PicBox_Bacteria3")
                     {
-                        Bacteria bacteria = new Bacteria(nombre, "especie", (x) - 20, (y) - 15, panel1);
+                        bacteria = new Bacteria(nombre, "especie", (x) - 20, (y) - 15, panel1);
                         //bacteria.dibujarImagen();
                     }
             //}));
@@ -171,14 +172,56 @@ namespace ExamenProgra
 
         private void btn_menos_Click(object sender, EventArgs e)
         {
+
             contemp -= 1;
             lb_temp.Text = contemp.ToString();
+
+            foreach (Control cComprobar in panel1.Controls)
+            {
+                if (cComprobar is PictureBox)
+                {
+                    if(cComprobar.Name == "Psicrofilas" && contemp >= 40)
+                    {
+                        panel1.Controls.Remove(cComprobar);
+                    }
+                    else if (cComprobar.Name == "Mesofilas" && contemp <= 9)
+                    {
+                        panel1.Controls.Remove(cComprobar);
+                    }
+                    else if (cComprobar.Name == "Termofilas" && contemp <= 20)
+                    {
+                        panel1.Controls.Remove(cComprobar);
+                    }
+                }
+            }
+
         }
 
         private void btn_mas_Click(object sender, EventArgs e)
         {
+
             contemp += 1;
             lb_temp.Text = contemp.ToString();
+
+            foreach (Control cComprobar in panel1.Controls)
+            {
+                if (cComprobar is PictureBox)
+                {
+                    if (cComprobar.Name == "Psicrofilas" && contemp >= 40)
+                    {
+                        panel1.Controls.Remove(cComprobar);
+                    }
+                    else if (cComprobar.Name == "Mesofilas" && contemp <= 9)
+                    {
+                        panel1.Controls.Remove(cComprobar);
+                    }
+                    else if (cComprobar.Name == "Termofilas" && contemp <= 20)
+                    {
+                        panel1.Controls.Remove(cComprobar);
+                    }
+                }
+            }
+
         }
     }
 }
