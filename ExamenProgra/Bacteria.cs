@@ -21,6 +21,8 @@ namespace ExamenProgra
         public PictureBox hijo;
         System.Timers.Timer tm;
 
+        int alpha = 0;
+
         Panel panel;
 
         public Bacteria()
@@ -208,7 +210,24 @@ namespace ExamenProgra
 
         void Timer_tick(object sender, EventArgs e)
         {
-            bacteria.Location = new Point(bacteria.Location.X, bacteria.Location.Y + 10);
+            if (alpha < 60)
+            {
+                Console.WriteLine(alpha);
+                Image image = bacteria.Image;
+                using (Graphics g = Graphics.FromImage(image))
+                {
+                    Pen pen = new Pen(Color.FromArgb(alpha, 153, 180, 209), image.Width);
+                    g.DrawLine(pen, -1, -1, image.Width, image.Height);
+                    g.Save();
+                }
+                bacteria.Image = image;
+                alpha++;
+            }
+            else
+            {
+                Console.WriteLine("else");
+                tm.Stop();
+            }
         }
 
         int Direccion()
