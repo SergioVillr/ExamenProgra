@@ -30,8 +30,6 @@ namespace ExamenProgra
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picture_Co2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_bacteria1 = new System.Windows.Forms.Button();
             this.btn_bacteria2 = new System.Windows.Forms.Button();
             this.btn_bacteria3 = new System.Windows.Forms.Button();
@@ -44,17 +42,26 @@ namespace ExamenProgra
             this.lb_CO2 = new System.Windows.Forms.Label();
             this.btn_AgregarCo2 = new System.Windows.Forms.Button();
             this.btn_QuitarCo2 = new System.Windows.Forms.Button();
+            this.picture_Co2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria1 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria2 = new System.Windows.Forms.PictureBox();
             this.PicBox_Bacteria3 = new System.Windows.Forms.PictureBox();
+            this.picture_O2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lb_O2 = new System.Windows.Forms.Label();
+            this.btn_agregarO2 = new System.Windows.Forms.Button();
+            this.btn_quitarO2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_Co2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Co2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_O2)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,6 +69,7 @@ namespace ExamenProgra
             this.panel1.AllowDrop = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.picture_O2);
             this.panel1.Controls.Add(this.picture_Co2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -69,28 +77,6 @@ namespace ExamenProgra
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1057, 768);
             this.panel1.TabIndex = 4;
-            // 
-            // picture_Co2
-            // 
-            this.picture_Co2.ErrorImage = null;
-            this.picture_Co2.Image = global::ExamenProgra.Properties.Resources.C2;
-            this.picture_Co2.Location = new System.Drawing.Point(928, 633);
-            this.picture_Co2.Name = "picture_Co2";
-            this.picture_Co2.Size = new System.Drawing.Size(126, 128);
-            this.picture_Co2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_Co2.TabIndex = 1;
-            this.picture_Co2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
-            this.pictureBox1.Location = new System.Drawing.Point(193, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btn_bacteria1
             // 
@@ -209,6 +195,28 @@ namespace ExamenProgra
             this.btn_QuitarCo2.UseVisualStyleBackColor = true;
             this.btn_QuitarCo2.Click += new System.EventHandler(this.btn_QuitarCo2_Click);
             // 
+            // picture_Co2
+            // 
+            this.picture_Co2.ErrorImage = null;
+            this.picture_Co2.Image = global::ExamenProgra.Properties.Resources.C2;
+            this.picture_Co2.Location = new System.Drawing.Point(12, 633);
+            this.picture_Co2.Name = "picture_Co2";
+            this.picture_Co2.Size = new System.Drawing.Size(126, 128);
+            this.picture_Co2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_Co2.TabIndex = 1;
+            this.picture_Co2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
+            this.pictureBox1.Location = new System.Drawing.Point(193, 156);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // PicBox_Bacteria1
             // 
             this.PicBox_Bacteria1.Image = global::ExamenProgra.Properties.Resources.bacterium1;
@@ -239,12 +247,64 @@ namespace ExamenProgra
             this.PicBox_Bacteria3.TabIndex = 2;
             this.PicBox_Bacteria3.TabStop = false;
             // 
+            // picture_O2
+            // 
+            this.picture_O2.ErrorImage = null;
+            this.picture_O2.Image = global::ExamenProgra.Properties.Resources.C2B;
+            this.picture_O2.Location = new System.Drawing.Point(928, 633);
+            this.picture_O2.Name = "picture_O2";
+            this.picture_O2.Size = new System.Drawing.Size(126, 128);
+            this.picture_O2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_O2.TabIndex = 2;
+            this.picture_O2.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.lb_O2);
+            this.panel4.Controls.Add(this.btn_agregarO2);
+            this.panel4.Controls.Add(this.btn_quitarO2);
+            this.panel4.Location = new System.Drawing.Point(1068, 156);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(376, 141);
+            this.panel4.TabIndex = 10;
+            // 
+            // lb_O2
+            // 
+            this.lb_O2.AutoSize = true;
+            this.lb_O2.Location = new System.Drawing.Point(162, 17);
+            this.lb_O2.Name = "lb_O2";
+            this.lb_O2.Size = new System.Drawing.Size(21, 13);
+            this.lb_O2.TabIndex = 2;
+            this.lb_O2.Text = "O2";
+            // 
+            // btn_agregarO2
+            // 
+            this.btn_agregarO2.Location = new System.Drawing.Point(219, 95);
+            this.btn_agregarO2.Name = "btn_agregarO2";
+            this.btn_agregarO2.Size = new System.Drawing.Size(75, 23);
+            this.btn_agregarO2.TabIndex = 1;
+            this.btn_agregarO2.Text = "Agregar";
+            this.btn_agregarO2.UseVisualStyleBackColor = true;
+            this.btn_agregarO2.Click += new System.EventHandler(this.btn_agregarO2_Click);
+            // 
+            // btn_quitarO2
+            // 
+            this.btn_quitarO2.Location = new System.Drawing.Point(89, 95);
+            this.btn_quitarO2.Name = "btn_quitarO2";
+            this.btn_quitarO2.Size = new System.Drawing.Size(75, 23);
+            this.btn_quitarO2.TabIndex = 0;
+            this.btn_quitarO2.Text = "Quitar";
+            this.btn_quitarO2.UseVisualStyleBackColor = true;
+            this.btn_quitarO2.Click += new System.EventHandler(this.btn_quitarO2_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1456, 768);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -257,15 +317,18 @@ namespace ExamenProgra
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_Co2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Co2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Bacteria3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_O2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -289,6 +352,11 @@ namespace ExamenProgra
         private System.Windows.Forms.Label lb_CO2;
         private System.Windows.Forms.Button btn_AgregarCo2;
         private System.Windows.Forms.Button btn_QuitarCo2;
+        private System.Windows.Forms.PictureBox picture_O2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lb_O2;
+        private System.Windows.Forms.Button btn_agregarO2;
+        private System.Windows.Forms.Button btn_quitarO2;
     }
 }
 

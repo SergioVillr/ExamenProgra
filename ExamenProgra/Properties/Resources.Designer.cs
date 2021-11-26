@@ -113,6 +113,16 @@ namespace ExamenProgra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap C2B {
+            get {
+                object obj = ResourceManager.GetObject("C2B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Co2 {
             get {
                 object obj = ResourceManager.GetObject("Co2", resourceCulture);

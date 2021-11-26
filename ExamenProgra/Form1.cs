@@ -15,6 +15,7 @@ namespace ExamenProgra
     {
         int contemp=25;
         int co2 = 1;
+        int O2 = 1;
         Bacteria bacteria;
 
         public Form1()
@@ -235,6 +236,18 @@ namespace ExamenProgra
         {
             co2 = 1;
             picture_Co2.Visible = true;
+        }
+
+        private void btn_quitarO2_Click(object sender, EventArgs e)
+        {
+            O2 = 0;
+            picture_O2.Visible = false;
+        }
+
+        private void btn_agregarO2_Click(object sender, EventArgs e)
+        {
+            O2 = 1;
+            picture_O2.Visible = true;
         }
     }
 }

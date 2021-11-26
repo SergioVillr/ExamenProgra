@@ -53,21 +53,58 @@ namespace ExamenProgra
 
 
         }
-        public void hijoBacteria()
+        public void hijoBacteria(int n)
         {
-            hijo = new PictureBox();
-            hijo.Name = "Psicrofilas";
-            hijo.Size = new Size(41, 31);
-            Image imagen = Image.FromFile("..\\..\\resource\\bacterium1.png");
-            hijo.Image = imagen;
-            hijo.SizeMode = PictureBoxSizeMode.StretchImage;
-            if (a == 1)
+            //hijo = new PictureBox();
+            if(n == 1)
             {
-                Console.WriteLine("Evalua a ");
-                hijo.Location = new Point(x + 70, y + 70);
+                hijo = new PictureBox();
+                hijo.Name = "Psicrofilas";
+                hijo.Size = new Size(41, 31);
+                Image imagen = Image.FromFile("..\\..\\resource\\bacterium1.png");
+                hijo.Image = imagen;
+                hijo.SizeMode = PictureBoxSizeMode.StretchImage;
+                if (a == 1)
+                {
+                    Console.WriteLine("Evalua a ");
+                    hijo.Location = new Point(x + 70, y + 70);
+                }
+                this.panel.Controls.Add(hijo);
+                _ = Moverhijo();
             }
-            this.panel.Controls.Add(hijo);
-            _ = Moverhijo();
+            if (n == 2)
+            {
+                hijo = new PictureBox();
+                hijo.Name = "Mesofilas";
+                hijo.Size = new Size(41, 31);
+                Image imagen = Image.FromFile("..\\..\\resource\\bacterium3.png");
+                hijo.Image = imagen;
+                hijo.SizeMode = PictureBoxSizeMode.StretchImage;
+                if (a == 1)
+                {
+                    Console.WriteLine("Evalua a ");
+                    hijo.Location = new Point(x + 70, y + 70);
+                }
+                this.panel.Controls.Add(hijo);
+                _ = Moverhijo();
+            }
+            if (n == 3)
+            {
+                hijo = new PictureBox();
+                hijo.Name = "Termofilas";
+                hijo.Size = new Size(41, 31);
+                Image imagen = Image.FromFile("..\\..\\resource\\bacterium2.png");
+                hijo.Image = imagen;
+                hijo.SizeMode = PictureBoxSizeMode.StretchImage;
+                if (a == 1)
+                {
+                    Console.WriteLine("Evalua a ");
+                    hijo.Location = new Point(x + 70, y + 70);
+                }
+                this.panel.Controls.Add(hijo);
+                _ = Moverhijo();
+            }
+
         }
 
         public async Task Moverhijo()
@@ -289,7 +326,20 @@ namespace ExamenProgra
                     {
                         Console.WriteLine("Llama a dibujar imagen ");
                         a = 1;
-                        //hijoBacteria();
+                        if(bacteria.Name == "Psicrofilas")
+                        {
+                            Console.WriteLine("Primer IF ");
+                            hijoBacteria(1);
+                        }
+                        if (bacteria.Name == "Mesofilas")
+                        {
+                            hijoBacteria(2);
+                        }
+                        if (bacteria.Name == "Termofilas")
+                        {
+                            hijoBacteria(3);
+                        }
+                        
                     }
                     if (sx < 82)
                     {
@@ -366,6 +416,10 @@ namespace ExamenProgra
         public void Temperaturas(Bacteria bacteria)
         {
             if(bacteria.nombre== "PicBox_Bacteria1")
+            {
+                bacteria.bacteria.Visible = false;
+            }
+            if(bacteria.nombre == "PicBox_Bacteria2")
             {
                 bacteria.bacteria.Visible = false;
             }
