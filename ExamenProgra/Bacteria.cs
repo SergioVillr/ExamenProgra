@@ -55,8 +55,8 @@ namespace ExamenProgra
         }
         public void hijoBacteria(int n)
         {
-            //hijo = new PictureBox();
-            if(n == 1)
+            Console.WriteLine("Ingresa al hijo bacteria");
+            if (n == 1)
             {
                 hijo = new PictureBox();
                 hijo.Name = "Psicrofilas";
@@ -322,13 +322,12 @@ namespace ExamenProgra
                 while (bacteria.Location.Y + bacteria.Width < panel.Height)
                 {
 
-                    if(sx<61)
+                    if(sx<42)
                     {
                         Console.WriteLine("Llama a dibujar imagen ");
                         a = 1;
                         if(bacteria.Name == "Psicrofilas")
                         {
-                            Console.WriteLine("Primer IF ");
                             hijoBacteria(1);
                         }
                         if (bacteria.Name == "Mesofilas")
