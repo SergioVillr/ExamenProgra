@@ -322,7 +322,7 @@ namespace ExamenProgra
                 while (bacteria.Location.Y + bacteria.Width < panel.Height)
                 {
 
-                    if(sx<42)
+                    if(sx==81)
                     {
                         Console.WriteLine("Llama a dibujar imagen ");
                         a = 1;

@@ -16,6 +16,9 @@ namespace ExamenProgra
         int contemp=25;
         int co2 = 1;
         int O2 = 1;
+        int r = 148;
+        int g = 138;
+        int b = 131;
         Bacteria bacteria;
 
         public Form1()
@@ -174,7 +177,26 @@ namespace ExamenProgra
 
         private void btn_menos_Click(object sender, EventArgs e)
         {
-
+            if (contemp == 25)
+            {
+                panel1.BackColor = Color.FromArgb(153, 180, 200);
+            }
+            if (contemp == 27)
+            {
+                panel1.BackColor = Color.FromArgb(245, 183, 177);
+            }
+            if (contemp == 35)
+            {
+                panel1.BackColor = Color.FromArgb(241, 148, 138);
+            }
+            if (contemp == 38)
+            {
+                panel1.BackColor = Color.FromArgb(236, 112, 99);
+            }
+            if (contemp == 40)
+            {
+                panel1.BackColor = Color.FromArgb(249, 71, 43);
+            }
             contemp -= 1;
             lb_temp.Text = contemp.ToString();
 
@@ -201,9 +223,31 @@ namespace ExamenProgra
 
         private void btn_mas_Click(object sender, EventArgs e)
         {
-
+            
             contemp += 1;
             lb_temp.Text = contemp.ToString();
+            
+
+            if(contemp == 25)
+            {
+                panel1.BackColor = Color.FromArgb(153, 180, 200);
+            }
+            if (contemp == 27)
+            {
+                panel1.BackColor = Color.FromArgb(245, 183, 177);
+            }
+            if (contemp == 35)
+            {
+                panel1.BackColor = Color.FromArgb(241,148, 138);
+            }
+            if (contemp == 38)
+            {
+                panel1.BackColor = Color.FromArgb(236, 112, 99);
+            }
+            if (contemp == 40)
+            {
+                panel1.BackColor = Color.FromArgb(249, 71, 43);
+            }
 
             foreach (Control cComprobar in panel1.Controls)
             {
